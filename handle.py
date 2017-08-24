@@ -20,6 +20,7 @@ class Handle(object):
                 if recMsg.MsgType == 'image':
                     mediaId = recMsg.MediaId
                     replyMsg = reply.ImageMsg(toUser, fromUser, mediaId)
+                    return replyMsg.send()
                 else:
                     return reply.Msg.send()
             else:
