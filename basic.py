@@ -12,7 +12,7 @@ class Basic:
         appid = str(Constant.APPID)
         appSecret = str(Constant.APPSECRET)
         postUrl =  ("https://api.weixin.qq.com/cgi-bin/token?grant_type="
-               "client_credential&appid=%s&secret=%s" % (appId, appSecret))
+               "client_credential&appid=%s&secret=%s" % (appid, appSecret))
         urlResp = urllib.urlopen(postUrl)
         urlResp = json.loads(urlResp.read())
 
